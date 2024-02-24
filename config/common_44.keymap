@@ -21,30 +21,17 @@
 
 / {
     macros {
-        Lock: Lock {
-            compatible = "zmk,behavior-macro";
-            label = "LOCK";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp L>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-        };
-
         lang: lang {
             compatible = "zmk,behavior-macro";
             label = "LANG";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI>,
+                <&kp LEFT_CONTROL>,
                 <&macro_tap>,
                 <&kp SPACE>,
                 <&macro_release>,
-                <&kp LEFT_GUI>;
+                <&kp LCTRL>;
         };
     };
 
@@ -57,13 +44,6 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <43>;
             tapping-term-ms = <200>;
-        };
-
-        prtscr_lock: prtscr_lock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PRTSCR_LOCK";
-            #binding-cells = <0>;
-            bindings = <&kp PRINTSCREEN>, <&Lock>;
         };
     };
 
@@ -89,10 +69,10 @@
             //                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&prtscr_lock  &kp GRAVE     &kp Q  &kp W  &kp E          &kp R      &kp T          &kp Y        &kp U            &kp I                &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
-              &kp LEFT_ALT  &kp A  &kp S  &kp D          &kp F      &kp G          &kp H        &kp J            &kp K                &kp L    &kp SEMI  &kp SQT
-              &kp LCTRL     &kp Z  &kp X  &kp C          &kp V      &kp B          &kp N        &kp M            &kp COMMA            &kp DOT  &kp FSLH  &mt RALT BSLH
-                                          &mt LCTRL ESC  &lt 1 TAB  &lt 2 SPACE    &lt 2 ENTER  &lt 1 BACKSPACE  &shift_lang RSHFT 0
+&kp LS(LG(NUMBER_4))  &kp GRAVE     &kp Q  &kp W  &kp E          &kp R      &kp T          &kp Y        &kp U            &kp I                &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
+                      &kp LEFT_ALT  &kp A  &kp S  &kp D          &kp F      &kp G          &kp H        &kp J            &kp K                &kp L    &kp SEMI  &kp SQT
+                      &kp LCTRL     &kp Z  &kp X  &kp C          &kp V      &kp B          &kp N        &kp M            &kp COMMA            &kp DOT  &kp FSLH  &mt RALT BSLH
+                                                  &mt LCTRL ESC  &lt 1 TAB  &lt 2 SPACE    &lt 2 ENTER  &lt 1 BACKSPACE  &shift_lang RSHFT 0
             >;
         };
 
