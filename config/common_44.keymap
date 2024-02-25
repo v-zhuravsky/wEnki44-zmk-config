@@ -12,8 +12,11 @@
 
 #define DEF 0
 #define LWR 1
+#define lower_layer LWR
 #define RSE 2
+#define raise_layer RSE
 #define ADJ 3
+#define adjust_layer ADJ
 #define GME 4
 #define GLR 5
 
@@ -180,8 +183,8 @@
         compatible = "zmk,conditional-layers";
 
         adj {
-            if-layers = <2 1>;
-            then-layer = <3>;
+            if-layers = <RSE LWR>;
+            then-layer = <ADJ>;
         };
     };
 };
