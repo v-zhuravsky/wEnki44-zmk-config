@@ -84,7 +84,6 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -146,6 +145,15 @@
             &out OUT_TOG  &tog GME      &ext_power EP_TOG  &none         &none         &none           &none         &none         &none         &ext_power EP_TOG  &tog GME      &out OUT_TOG
                                                            &trans        &none         &trans          &trans        &none         &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
