@@ -1,4 +1,4 @@
-name: Reusable user config build
+name: build
 
 on:
   workflow_call:
