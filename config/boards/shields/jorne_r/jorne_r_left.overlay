@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "jorne.dtsi"
+#include "jorne_r.dtsi"
 
 &kscan0 {
     col-gpios

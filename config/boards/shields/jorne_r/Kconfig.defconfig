@@ -2,14 +2,14 @@
 if SHIELD_JORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Jorne"
+    default "Nijuni"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_JORNE_LEFT || SHIELD_JORNE_RIGHT
+if SHIELD_JORNE_R_LEFT || SHIELD_JORNE_R_RIGHT
 
 config ZMK_SPLIT
     default y

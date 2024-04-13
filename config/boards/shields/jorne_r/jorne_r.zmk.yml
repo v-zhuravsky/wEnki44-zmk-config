@@ -10,5 +10,5 @@ features:
   - display
   - underglow
 siblings:
-  - jorne_left
-  - jorne_right
+  - jorne_r_left
+  - jorne_r_right

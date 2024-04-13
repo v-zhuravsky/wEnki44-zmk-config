@@ -14,9 +14,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: jorne_left
+    shield: jorne_r_left
   - board: nice_nano_v2
-    shield: jorne_right
+    shield: jorne_r_right
   - board: nice_nano_v2
     shield: settings_reset
 #  - board: nice_nano_v2
